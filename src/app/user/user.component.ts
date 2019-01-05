@@ -7,26 +7,16 @@ import { Component } from '@angular/core';
 })
 export class UserComponent {
   userName = '';
-  buttonDisable = true;
 
   constructor() {
   }
 
-  checkEnableDisable(){
-    if (this.userName.length > 1) {
-      this.buttonDisable = false;
-    }
-    else {
-      this.buttonDisable = true;
-    }
-
-    return this.buttonDisable;
-    // return this.userName === '';
+  checkEnableDisable() {
+    return this.userName === '';
   }
 
-  onButtonClick(){
+  onButtonClick() {
     this.userName = '';
-    this.buttonDisable = false;
   }
 
 }
